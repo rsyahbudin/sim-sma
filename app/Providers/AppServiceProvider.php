@@ -27,17 +27,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-         Paginator::useBootstrap();
+        Paginator::useBootstrap();
 
         // Blade::directive('periksajurusan', function ($expression) {
-                   
+
         //     // $strex=[];
         //     $strex=explode(" ",$expression);
         //     dd($strex);
-        //     if($strex[1]=='OTO'){
+        //     if($strex[1]=='IPA'){
         //         $hasil='Otomotof';
-        //     }elseif($strex[1]=='TKJ'){
-        //         $hasil='Teknik Komputer dan Jaringan';
+        //     }elseif($strex[1]=='IPS'){
+        //         $hasil='IPS';
         //     }else{
         //         $hasil='Umum';
         //     }
@@ -54,8 +54,8 @@ class AppServiceProvider extends ServiceProvider
             return "<?php echo number_format($expression, 0, ',', '.'); ?>";
         });
 
-          //Tanggal Indo
-          Blade::directive('tanggalindo', function ($expression) {
+        //Tanggal Indo
+        Blade::directive('tanggalindo', function ($expression) {
 
             //   return dd(Carbon::parse($expression)->translatedFormat('d F Y'));
             return Carbon::parse($expression)->translatedFormat('d F Y');

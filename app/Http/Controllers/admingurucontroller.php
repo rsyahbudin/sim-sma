@@ -77,7 +77,7 @@ class admingurucontroller extends Controller
         array(
                'nomerinduk'     =>   $request->nomerinduk,
                'name'     =>   $request->nama,
-               'username'     =>   date("Y-m-d H:i:s"),
+               'username'     =>   strtolower(str_replace(' ', '', $request->nama)),
                'password' => Hash::make($request->password),
                'tipeuser'     =>   'guru',
                'email'     =>   $request->email,
